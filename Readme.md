@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Закиев](https://up.htmlacademy.ru/htmlcss/36/user/2140615).
-* Наставник: `Неизвестно`.
+* Наставник: `Евгений Котов`(https://htmlacademy.ru/profile/evgeniy_kotov).
 
 ---
 
