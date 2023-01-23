@@ -6,18 +6,41 @@
   </head>
   <body>
     <header class="page-header">
+      <!--Заголовок h1 будет скрыт-->
+      <h1>Интернет магазин "Device"</h1>
       <a class="header-logo" href="#">
         <img class="header-logo-icon" src="#" alt="device">
       </a>
       <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
+        <label class="header-search-name">
+          Поиск по сайту
         <input class="header-search-field" type="search" name="search" placeholder="Поиск по сайту">
+        </label>
         <input class="header-search-btn" type="submit" value="Найти">
       </form>
-      <a class="header-login" href="#">
-        <img class="header-login-icon" src="#" alt="Пользователь">
-        <span class="header-login-linc">Войти</span>
-      </a>
-
+      <div class="header-links">
+        <a class="header-link" href="#">
+          <span class="header-link__login">Войти</span>
+        </a>
+        <a class="header-link" href="#">
+          <span class="header-link__compare">Сравить</span>
+        </a>
+        <a class="header-link" href="#">
+          <span class="header-link__cart">Корзина</span>
+        </a>
+      </div>
+      <nav class="header-navigation">
+        <button class="catalog-btn" type="button">Каталог товаров</button>
+        <a class="delivery-link" href="#">ДОСТАВКА</a>
+        <a class="guarantee-link" href="#">ГАРАНТИЯ</a>
+        <a class="contacts-link" href="#">КОНТАКТЫ</a>
+      </nav>
     </header>
+    <main>
+      <section class="device-slider">
+
+      </section>
+
+    </main>
   </body>
 </html>
