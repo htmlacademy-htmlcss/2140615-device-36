@@ -5,14 +5,16 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+
+    <!--Хэдер-->
+
     <header class="page-header">
-      <!--Заголовок h1 будет скрыт-->
-      <h1>Интернет магазин "Device"</h1>
+      <h1 class="visually-hidden">Интернет магазин "Device"</h1>
       <a class="header-logo" href="#">
-        <img class="header-logo-icon" src="#" alt="device">
+        <img class="header-logo-icon" src="#" alt="Логотип интнрнет магазина 'Device'">
       </a>
       <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-        <label class="header-search-name">
+        <label class="visually-hidden">
           Поиск по сайту
         <input class="header-search-field" type="search" name="search" placeholder="Поиск по сайту">
         </label>
@@ -31,17 +33,119 @@
       </div>
       <nav class="header-navigation">
         <button class="catalog-btn" type="button">Каталог товаров</button>
-        <a class="delivery-link" href="#">ДОСТАВКА</a>
-        <a class="guarantee-link" href="#">ГАРАНТИЯ</a>
-        <a class="contacts-link" href="#">КОНТАКТЫ</a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">ДОСТАВКА</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">ГАРАНТИЯ</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">КОНТАКТЫ</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main>
-      <section class="device-slider">
-        <!--Заголовок h2 будет скрыт-->
-        <h2 class="Best-devices">Лучшие девайсы</h2>
 
+    <!--Основной блок-->
 
+    <main class="main-index">
+      <section class="promo">
+        <h2 class="visually-hidden">Лучшие девайсы</h2>
+
+        <div class="promo-slider-card">
+          <h3 class="visually-hidden">Квадрокоптеры</h3>
+          <img class="promo-slider-image" src="" alt="Квадрокоптер" >
+          <strong class="promo-slider-tegline">Порхает как бабочка,<br>жалит как пчела!</strong>
+          <p class="promo-slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
+          </p>
+          <a class="button promo-slider-details" href="#">ПОДРОБНЕЕ</a>
+          <table class="promo-slider-feature">
+            <capture class="visually-hidden">Характеристики</capture>
+            <tr class="feature-value">
+              <td class="?">800 м</td>
+              <td class="?">50 м</td>
+            </tr>
+            <tr class="feature-description">
+              <td class="?">Дальность полета</td>
+              <td class="?">Радиус поражения</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="promo-slider-card">
+          <h3 class="visually-hidden">Фитнес-браслеты</h3>
+          <img class="promo-slider-image" src="" alt="Фитнес-браслет" >
+          <strong class="promo-slider-tegline">Худеем<br>правильно!</strong>
+          <p class="promo-slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+          </p>
+          <a class="button promo-slider-details" href="#">ПОДРОБНЕЕ</a>
+          <table class="promo-slider-feature">
+            <capture class="visually-hidden">Характеристики</capture>
+            <tr class="feature-value">
+              <td class="?">48 часов</td>
+            </tr>
+            <tr class="feature-description">
+              <td class="?">Без подзарядки</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="promo-slider-card">
+          <h3 class="visually-hidden">Селфи-палки</h3>
+          <img class="promo-slider-image" src="" alt="Селфи-палки" >
+          <strong class="promo-slider-tegline">Делай селфи,<br>как Бен Стиллер!</strong>
+          <p class="promo-slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+          </p>
+          <a class="button promo-slider-details" href="#">ПОДРОБНЕЕ</a>
+          <table class="promo-slider-feature">
+            <capture class="visually-hidden">Характеристики</capture>
+            <tr class="feature-value">
+              <td class="?">8,5 м</td>
+              <td class="?">5 кг</td>
+              <td class="?">Карбон</td>
+            </tr>
+            <tr class="feature-description">
+              <td class="?">Длина палки</td>
+              <td class="?">Вес палки</td>
+              <td class="?">Материал</td>
+            </tr>
+          </table>
+        </div>
+
+        <!--Кнопки вперед и назад должны быть в контейнере карточки товара или вне?-->
+        <button class="promo-slider-button slider-prev" type="button">
+          <span class="visually-hidden">Предыдущий товар</span>
+        </button>
+        <button class="promo-slider-button slider-next" type="button">
+          <span class="visually-hidden">Следующий товар</span>
+        </button>
+
+        <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+              <span class="visually-hidden">1 девайс</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 девайс</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">3 девайс</span>
+            </button>
+          </li>
+        </ol>
+      </section>
+
+      <section class="category">
+        <ul class="category-list">
+          <li class="category-item">
+            <a class="category-link" href="#"></a>
+          </li>
+        </ul>
       </section>
 
     </main>
