@@ -16,24 +16,28 @@
         <img class="header-logo-icon" src="images/svg/logotype.svg" width="145" height="36" alt="Логотип интернет магазина 'Device'">
       </a>
       <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-        <label class="visually-hidden">
-          Поиск по сайту
-        <input class="header-search-field" type="search" name="search" placeholder="Поиск по сайту">
+        <label class="header-search-label">
+          <span class="visually-hidden">Поиск по сайту</span>
+          <input class="header-search-field" type="search" name="search" placeholder="Поиск по сайту">
+          <input class="header-search-btn" type="submit" value="Найти">
         </label>
-        <input class="header-search-btn" type="submit" value="Найти">
       </form>
       <div class="header-links">
         <a class="header-link" href="#">
           <span class="header-link__login">Войти</span>
         </a>
+        <a class="header-link header-link-exit" href="#">
+          <span class="header-link__login">Выйти</span>
+        </a>
         <a class="header-link" href="#">
           <span class="header-link__compare">Сравить</span>
         </a>
         <a class="header-link" href="#">
+          <span class="header-link__incart">2</span>
           <span class="header-link__cart">Корзина</span>
         </a>
       </div>
-      <nav class="header-navigation">
+    <nav class="header-navigation">
         <button class="catalog-btn" type="button">Каталог товаров</button>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -235,22 +239,21 @@
         </ul>
         <ul class="footer-social-list">
           <li class="footer-social-item">
-            <a class="button" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Telegram</span>
+            <a class="social-link" href="https://t.me/htmlacademy">
+              <p class="social-button telegram"><span class="visually-hidden">Мы в Telegram</span></p>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden">YouTube</span>
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <p class="social-button youtube"><span class="visually-hidden">Мы на YouTube</span></p>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://twitter.com/htmlacademy_ru">
-              <span class="visually-hidden">Twitter</span>
+            <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+              <p class="social-button twitter"></p><span class="visually-hidden">Мы в Twitter</span>
             </a>
           </li>
-        </ul>
-      </section>
+        </ul>      </section>
       <section class="footer-phone">
         <h2 class="visually-hidden">Телефон</h2>
         <address class="footer-contacts-address">

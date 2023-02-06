@@ -197,7 +197,6 @@ body {
 .category-item {
   width: 160px;
   height: 253px;
-  background-color: var(--color-yelow);
 }
 
 .category-link {
@@ -205,6 +204,49 @@ body {
   line-height: 24px;
   color: var(--color-black);
   text-decoration: none;
+}
+
+.category-image {
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-yelow);
+}
+
+.vr {
+  background-image: url(../images/svg/vr.svg);
+  background-size: 97px 55px;
+}
+
+.monopod {
+  background-image: url(../images/svg/monopod.svg);
+  background-size: 86px 117px;
+  background-position: bottom;
+}
+
+.actioncam {
+  background-image: url(../images/svg/actioncam.svg);
+  background-size: 71px 87px;
+}
+
+.bracelet {
+  background-image: url(../images/svg/bracelet.svg);
+  background-size: 107px 65px;
+}
+
+.watch {
+  background-image: url(../images/svg/watch.svg);
+  background-size: 56px 98px;
+}
+
+.quadrocopter {
+  background-image: url(../images/svg/quadrocopter.svg);
+  background-size: 132px 69px;
+}
+
+.category-title {
+  background-color: var(--color-white);
 }
 
 /*  Сервисы  */
@@ -317,14 +359,31 @@ body {
   color: var(--color-white);
 }
 
-.telegram {
+.footer-social-list {
+  list-style-type: none;
+}
+
+.social-button {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-image: url(../images/svg/telegram.svg);
-  background-size: 13px 11px;
   background-repeat: no-repeat;
   background-color: var(--color-white);
   background-position: center;
   opacity: 0.3;
+}
+
+.telegram {
+  background-image: url(../images/svg/telegram.svg);
+  background-size: 13px 11px;
+}
+
+.youtube {
+  background-image: url(../images/svg/youtube.svg);
+  background-size: 16px 11px;
+}
+
+.twitter {
+  background-image: url(../images/svg/twitter.svg);
+  background-size: 15px 14px;
 }
