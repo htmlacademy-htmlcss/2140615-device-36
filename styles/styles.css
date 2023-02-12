@@ -100,7 +100,7 @@ body {
   margin-bottom: 30px;
 }
 
-.header-search{
+.header-search {
   margin-right: 26px;
 }
 
@@ -109,6 +109,7 @@ body {
   width: 517px;
   height: 40px;
 }
+
 .header-search-field {
   font-family: inherit;
   font-size: 16px;
@@ -193,9 +194,14 @@ body {
   flex-grow: 1;
 }
 
+.promo {
+  margin-bottom: 70px;
+}
+
 .promo-slider-card {
   display: flex;
 }
+
 .promo-slider-image {
   margin-right: 40px;
 }
@@ -253,7 +259,8 @@ body {
   font-weight: 700;
   font-size: 180px;
   color: var(--color-white);
-  background-color: #000000; /*Добавлен временно для наглядности*/
+  background-color: #000000;
+  /*Добавлен временно для наглядности*/
   padding-right: 46px;
 }
 
@@ -262,23 +269,31 @@ body {
   border: none;
 }
 
-.bracelet-card, .monopod-card { /*Временно спрятаны*/
+.bracelet-card,
+.monopod-card {
+  /*Временно спрятаны*/
   display: none;
 }
 
 .slider-prev {
+  /*Временно спрятаны*/
+  display: none;
   background-image: url(../images/svg/arrow-left.svg);
   width: 20px;
   height: 60px;
 }
 
 .slider-next {
+  /*Временно спрятаны*/
+  display: none;
   background-image: url(../images/svg/arrow-right.svg);
   width: 20px;
   height: 60px;
 }
 
 .slider-pagination {
+  /*Временно спрятаны*/
+  display: none;
   list-style-type: none;
 }
 
@@ -297,18 +312,25 @@ body {
 
 /*  Категории товаров  */
 
+.category {
+  margin-bottom: 70px;
+}
+
 .category-list {
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .category-item {
   width: 160px;
   height: 253px;
+  margin: 0;
 }
 
 .category-link {
-  font-family: "Raleway", sans-serif;
-  line-height: 24px;
   color: var(--color-black);
   text-decoration: none;
 }
@@ -319,6 +341,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--color-yelow);
+  margin: 0 0 32px 0;
 }
 
 .category-image-vr {
@@ -353,17 +376,49 @@ body {
 }
 
 .category-title {
+  margin: 0;
+  height: 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   background-color: var(--color-white);
 }
 
 /*  Сервисы  */
 
 .services {
+  margin-bottom: 70px;
+}
+
+.services-background {
   background-color: var(--color-light);
+  margin-bottom: 70px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .slider-tub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   list-style-type: none;
+  width: 287px;
+  height: 319px;
+  padding: 65px 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.slider-tub-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 873px;
+  padding: 0 63px 0 116px;
+  box-sizing: border-box;
 }
 
 .slider-tub-title {
@@ -371,9 +426,30 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: var(--color-black);
+  margin: 0 0 34px 0;
+}
+
+.slider-tub-description {
+  width: 480px;
+  margin: 0;
+}
+
+.delivery {
+  display: flex;
+  height: 100px;
+  background-color: var(--color-light);
+}
+
+.delivery-pic-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  background-color: var(--color-yelow);
 }
 
 .delivery-link {
+  display: flex;
   color: var(--color-black);
   text-decoration: none;
 }
@@ -382,18 +458,38 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0;
+  width: 910px;
+  text-align: center;
+  align-self: center;
+}
+
+.tub-card-guarantee,
+.tub-card-credit {
+  /*Временно скрыты*/
+  display: none;
 }
 
 /*  О нас  */
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.about {
+  width: 520px;
+}
 
 .title {
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: var(--color-black);
+  margin: 48px 0;
 }
 
 .deliveries-item {
@@ -403,6 +499,10 @@ body {
 }
 
 /*  Контакты  */
+
+.contacts {
+  width: 532px;
+}
 
 .contacts-subtitle {
   font-weight: 700;
@@ -423,8 +523,41 @@ body {
   background-color: var(--color-light);
 }
 
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 421px;
+  padding-bottom: 56px;
+}
+
+.newsletter-title {
+  width: 350px;
+  margin: 64px 0 0 0;
+}
+
+.newsletter-description {
+  width: 540px;
+  margin: 74px 0 0 0;
+  padding: 0 15px 0 0;
+  box-sizing: border-box;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
 .newsletter-form-email {
+  font-size: 18px;
+  line-height: 30px;
   background-color: inherit;
+  width: 557px;
+  padding-left: 16px;
+}
+
+.newsletter-form-name {
+  display: flex;
 }
 
 .newsletter-button {
@@ -433,6 +566,12 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  width: 253px;
+  height: 55px;
+}
+
+.newsletter-free {
+  align-self: center;
 }
 
 /*  Футер  */
