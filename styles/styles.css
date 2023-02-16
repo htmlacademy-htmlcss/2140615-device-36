@@ -85,7 +85,7 @@ body {
 .page-header {
   color: var(--color-black);
   background-color: var(--color-yelow);
-  padding: 46px 60px 134px 60px;
+  padding: 46px 60px 150px 60px;
   margin-top: 40px;
 }
 
@@ -195,6 +195,7 @@ body {
 }
 
 .promo {
+  margin-top: -150px;
   margin-bottom: 70px;
 }
 
@@ -209,6 +210,7 @@ body {
 .promo-slider-container {
   display: flex;
   flex-direction: column;
+  padding: 29px 0 0 0;
 }
 
 .promo-slider-tegline {
@@ -218,6 +220,7 @@ body {
   line-height: 50px;
   color: var(--color-black);
   height: 129px;
+  margin-top: -43px;
 }
 
 .promo-slider-description {
@@ -259,8 +262,6 @@ body {
   font-weight: 700;
   font-size: 180px;
   color: var(--color-white);
-  background-color: #000000;
-  /*Добавлен временно для наглядности*/
   padding-right: 46px;
 }
 
@@ -313,7 +314,7 @@ body {
 /*  Категории товаров  */
 
 .category {
-  margin-bottom: 70px;
+  margin-bottom: 172px;
 }
 
 .category-list {
@@ -393,11 +394,14 @@ body {
 .services-background {
   background-color: var(--color-light);
   margin-bottom: 70px;
+  height: 289px;
 }
 
 .services-container {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: -102px;
 }
 
 .slider-tub {
@@ -410,6 +414,30 @@ body {
   padding: 65px 0;
   margin: 0;
   box-sizing: border-box;
+  border-right: 7px solid var(--color-black);
+}
+
+.slider-tub-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+}
+
+.slider-tub-button-current {
+  width: 100%;
+  color: var(--color-yelow);
+  background-color: var(--color-black);
+}
+
+.slider-tub-button {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
 }
 
 .slider-tub-card {
@@ -839,13 +867,14 @@ body {
   margin-bottom: 44px;
 }
 
-.pagination-wrapper{
+.pagination-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
   background-color: var(--color-light_gray);
 }
+
 .pagination {
   list-style-type: none;
   display: flex;
