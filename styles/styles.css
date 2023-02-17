@@ -116,6 +116,11 @@ body {
   line-height: 20px;
   background-color: inherit;
   flex-grow: 1;
+  border: 2px solid var(--color-black);
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 0 0 0 48px;
 }
 
 .header-search-btn {
@@ -124,6 +129,9 @@ body {
   line-height: 20px;
   background-color: inherit;
   width: 160px;
+  border: 2px solid var(--color-black);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .header-links {
@@ -236,6 +244,9 @@ body {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -520,10 +531,30 @@ body {
   margin: 48px 0;
 }
 
+.about-description {
+  margin: 0 0 30px 0;
+}
+
+.deliveries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 37px;
+}
+
 .deliveries-item {
   font-weight: 700;
   line-height: 20px;
   color: var(--color-black);
+}
+
+.about-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 40px;
 }
 
 /*  Контакты  */
@@ -532,17 +563,37 @@ body {
   width: 532px;
 }
 
+.contacts-description {
+  margin: 0 0 30px 0;
+}
+
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
+  margin: 0 0 15px 0;
 }
 
 .contacts-address {
   font-style: normal;
+  margin: 0 0 30px 0;
+}
+
+.contacts-address-text {
+  margin: 0;
 }
 
 .contacts-phone {
   color: var(--color-dark);
+}
+
+.contacts-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.button-feedback {
+  width: 259px;
+  height: 40px;
 }
 
 /*  Подписка  */
@@ -563,6 +614,7 @@ body {
 .newsletter-title {
   width: 350px;
   margin: 64px 0 0 0;
+  padding: 0 0 0 7px;
 }
 
 .newsletter-description {
@@ -577,11 +629,16 @@ body {
 }
 
 .newsletter-form-email {
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 30px;
   background-color: inherit;
   width: 557px;
-  padding-left: 16px;
+  padding-left: 17px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #C4C4C4;
 }
 
 .newsletter-form-name {
@@ -596,10 +653,14 @@ body {
   text-transform: uppercase;
   width: 253px;
   height: 55px;
+  box-sizing: border-box;
+  border: 3px solid #C4C4C4;
 }
 
 .newsletter-free {
+  text-align: end;
   align-self: center;
+  min-width: 160px;
 }
 
 /*  Футер  */
