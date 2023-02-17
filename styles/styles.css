@@ -234,14 +234,15 @@ body {
 
 .promo-slider-description {
   margin: 0;
-  height: 120px;
+  height: 110px;
 }
 
 .promo-slider-details {
   display: inline-block;
   width: 220px;
+  height: 40px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .button {
@@ -255,15 +256,27 @@ body {
   color: var(--color-black);
   text-transform: uppercase;
   text-decoration: none;
+
+}
+
+.promo-features {
+  display: flex;
+  gap: 20px;
+}
+
+.promo-slider-features {
+  margin: 0;
 }
 
 .feature-value {
   font-size: 36px;
   color: var(--color-black);
+  margin: 0 0 12px 0;
 }
 
 .feature-description {
   font-size: 16px;
+  margin: 0;
 }
 
 .card-number {
@@ -596,6 +609,7 @@ body {
   padding: 0;
   margin: 0 0 30px 0;
 }
+
 .button-feedback {
   width: 259px;
   height: 40px;
