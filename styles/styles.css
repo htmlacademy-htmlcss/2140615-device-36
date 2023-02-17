@@ -85,7 +85,7 @@ body {
 .page-header {
   color: var(--color-black);
   background-color: var(--color-yelow);
-  padding: 46px 60px 150px 60px;
+  padding: 46px 60px 134px 60px;
   margin-top: 40px;
 }
 
@@ -180,18 +180,19 @@ body {
 
 .navigation-list {
   display: flex;
+  gap: 45px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-}
-
-.navigation-item:not(:last-child) {
-  margin-right: 45px;
+  margin: 0 -4px 0 0;
 }
 
 .navigation-link {
+  display: flex;
   color: inherit;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  height: 50px;
 }
 
 /*--Основной блок--*/
@@ -273,7 +274,7 @@ body {
   font-weight: 700;
   font-size: 180px;
   color: var(--color-white);
-  padding-right: 46px;
+  padding-right: 48px;
 }
 
 .promo-slider-button {
@@ -393,6 +394,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: -0.02em;
   background-color: var(--color-white);
 }
 
@@ -533,6 +535,7 @@ body {
 
 .about-description {
   margin: 0 0 30px 0;
+  padding: 0 30px 0 0;
 }
 
 .deliveries-list {
@@ -546,6 +549,7 @@ body {
 .deliveries-item {
   font-weight: 700;
   line-height: 20px;
+  letter-spacing: -0.02em;
   color: var(--color-black);
 }
 
@@ -565,6 +569,7 @@ body {
 
 .contacts-description {
   margin: 0 0 30px 0;
+  padding: 0 30px 0 0;
 }
 
 .contacts-subtitle {
@@ -618,7 +623,7 @@ body {
 }
 
 .newsletter-description {
-  width: 540px;
+  width: 553px;
   margin: 74px 0 0 0;
   padding: 0 15px 0 0;
   box-sizing: border-box;
@@ -652,7 +657,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 253px;
-  height: 55px;
+  height: 57px;
   box-sizing: border-box;
   border: 3px solid #C4C4C4;
 }
@@ -697,15 +702,15 @@ body {
 }
 
 .footer-navigation {
-  padding: 137px 0 0 0;
+  padding: 133px 0 0 0;
 }
 
 .footer-navigation-list {
   list-style-type: none;
   display: flex;
   padding: 0;
-  margin: 0 0 62px 0;
-  gap: 35px;
+  margin: 0 0 57px 0;
+  gap: 32px;
 }
 
 .footer-navigation-link {
