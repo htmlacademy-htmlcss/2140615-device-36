@@ -116,6 +116,11 @@ body {
   line-height: 20px;
   background-color: inherit;
   flex-grow: 1;
+  border: 2px solid var(--color-black);
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 0 0 0 48px;
 }
 
 .header-search-btn {
@@ -124,6 +129,9 @@ body {
   line-height: 20px;
   background-color: inherit;
   width: 160px;
+  border: 2px solid var(--color-black);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .header-links {
@@ -172,18 +180,19 @@ body {
 
 .navigation-list {
   display: flex;
+  gap: 45px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-}
-
-.navigation-item:not(:last-child) {
-  margin-right: 45px;
+  margin: 0 -4px 0 0;
 }
 
 .navigation-link {
+  display: flex;
   color: inherit;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  height: 50px;
 }
 
 /*--Основной блок--*/
@@ -195,6 +204,7 @@ body {
 }
 
 .promo {
+  margin-top: -150px;
   margin-bottom: 70px;
 }
 
@@ -209,6 +219,7 @@ body {
 .promo-slider-container {
   display: flex;
   flex-direction: column;
+  padding: 29px 0 0 0;
 }
 
 .promo-slider-tegline {
@@ -218,21 +229,26 @@ body {
   line-height: 50px;
   color: var(--color-black);
   height: 129px;
+  margin-top: -43px;
 }
 
 .promo-slider-description {
   margin: 0;
-  height: 120px;
+  height: 110px;
 }
 
 .promo-slider-details {
   display: inline-block;
   width: 220px;
+  height: 40px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -240,15 +256,27 @@ body {
   color: var(--color-black);
   text-transform: uppercase;
   text-decoration: none;
+
+}
+
+.promo-features {
+  display: flex;
+  gap: 20px;
+}
+
+.promo-slider-features {
+  margin: 0;
 }
 
 .feature-value {
   font-size: 36px;
   color: var(--color-black);
+  margin: 0 0 12px 0;
 }
 
 .feature-description {
   font-size: 16px;
+  margin: 0;
 }
 
 .card-number {
@@ -259,9 +287,7 @@ body {
   font-weight: 700;
   font-size: 180px;
   color: var(--color-white);
-  background-color: #000000;
-  /*Добавлен временно для наглядности*/
-  padding-right: 46px;
+  padding-right: 48px;
 }
 
 .promo-slider-button {
@@ -313,7 +339,7 @@ body {
 /*  Категории товаров  */
 
 .category {
-  margin-bottom: 70px;
+  margin-bottom: 172px;
 }
 
 .category-list {
@@ -381,6 +407,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: -0.02em;
   background-color: var(--color-white);
 }
 
@@ -393,11 +420,14 @@ body {
 .services-background {
   background-color: var(--color-light);
   margin-bottom: 70px;
+  height: 289px;
 }
 
 .services-container {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  top: -102px;
 }
 
 .slider-tub {
@@ -410,6 +440,30 @@ body {
   padding: 65px 0;
   margin: 0;
   box-sizing: border-box;
+  border-right: 7px solid var(--color-black);
+}
+
+.slider-tub-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+}
+
+.slider-tub-button-current {
+  width: 100%;
+  color: var(--color-yelow);
+  background-color: var(--color-black);
+}
+
+.slider-tub-button {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
 }
 
 .slider-tub-card {
@@ -492,10 +546,32 @@ body {
   margin: 48px 0;
 }
 
+.about-description {
+  margin: 0 0 30px 0;
+  padding: 0 30px 0 0;
+}
+
+.deliveries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 37px;
+}
+
 .deliveries-item {
   font-weight: 700;
   line-height: 20px;
+  letter-spacing: -0.02em;
   color: var(--color-black);
+}
+
+.about-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 40px;
 }
 
 /*  Контакты  */
@@ -504,17 +580,39 @@ body {
   width: 532px;
 }
 
+.contacts-description {
+  margin: 0 0 30px 0;
+  padding: 0 30px 0 0;
+}
+
 .contacts-subtitle {
   font-weight: 700;
   font-size: 24px;
+  margin: 0 0 15px 0;
 }
 
 .contacts-address {
   font-style: normal;
+  margin: 0 0 30px 0;
+}
+
+.contacts-address-text {
+  margin: 0;
 }
 
 .contacts-phone {
   color: var(--color-dark);
+}
+
+.contacts-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.button-feedback {
+  width: 259px;
+  height: 40px;
 }
 
 /*  Подписка  */
@@ -535,10 +633,11 @@ body {
 .newsletter-title {
   width: 350px;
   margin: 64px 0 0 0;
+  padding: 0 0 0 7px;
 }
 
 .newsletter-description {
-  width: 540px;
+  width: 553px;
   margin: 74px 0 0 0;
   padding: 0 15px 0 0;
   box-sizing: border-box;
@@ -549,11 +648,16 @@ body {
 }
 
 .newsletter-form-email {
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 30px;
   background-color: inherit;
   width: 557px;
-  padding-left: 16px;
+  padding-left: 17px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid #C4C4C4;
 }
 
 .newsletter-form-name {
@@ -567,11 +671,15 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 253px;
-  height: 55px;
+  height: 57px;
+  box-sizing: border-box;
+  border: 3px solid #C4C4C4;
 }
 
 .newsletter-free {
+  text-align: end;
   align-self: center;
+  min-width: 160px;
 }
 
 /*  Футер  */
@@ -608,15 +716,15 @@ body {
 }
 
 .footer-navigation {
-  padding: 137px 0 0 0;
+  padding: 133px 0 0 0;
 }
 
 .footer-navigation-list {
   list-style-type: none;
   display: flex;
   padding: 0;
-  margin: 0 0 62px 0;
-  gap: 35px;
+  margin: 0 0 57px 0;
+  gap: 32px;
 }
 
 .footer-navigation-link {
@@ -683,16 +791,20 @@ body {
 
 /*__Каталог__*/
 
+.catalog-header {
+  padding-bottom: 20px;
+}
+
 .main-inner {
   color: var(--color-black);
 }
 
 .inner-header {
-  padding: 35px 60px;
+  padding: 35px 60px 34px 60px;
 }
 
 .inner-header-title {
-  margin: 0 0 16px 0;
+  margin: 0 0 15px 0;
 }
 
 .breadcrumbs {
@@ -701,6 +813,10 @@ body {
   padding: 0;
   margin: 0;
   gap: 36px;
+}
+
+.breadcrumbs-item {
+  line-height: 20px;
 }
 
 .breadcrumbs-link {
@@ -718,7 +834,8 @@ body {
   display: flex;
 }
 
-.catalog-filter {
+.catalog-filter-wrapper {
+  padding: 25px 40px 0 60px;
   width: 320px;
 }
 
@@ -728,23 +845,40 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  margin: 0 0 60px 0;
 }
 
 .catalog-filter-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  margin: 0 0 20px 0;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-list {
   list-style-type: none;
   font-size: 16px;
   line-height: 20px;
+  margin: 0 0 35px 0;
+  padding: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 17px;
 }
 
 .filter-button {
   background-color: inherit;
   border: none;
+  width: 220px;
+  height: 40px;
+  padding: 0;
 }
 
 .sorting-wrapper {
@@ -766,10 +900,13 @@ body {
 .select-control {
   font-size: 18px;
   line-height: 30px;
+  letter-spacing: 0.025em;
   color: var(--color-black);
   background-color: inherit;
   height: 30px;
   width: 141px;
+  border: none;
+  margin-right: 12px;
 }
 
 .sorting-btn-wrapper {
@@ -799,7 +936,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-white);
-  padding: 70px 40px;
+  padding: 70px 40px 79px 40px;
 }
 
 .product-list {
@@ -813,13 +950,37 @@ body {
 }
 
 .product-card-link {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: var(--color-black);
+}
+
+.product-card-button {
+  display: none;
+  /*будет открываться при наведении*/
+  position: relative;
+  width: 220px;
+  height: 40px;
+  top: 210px;
+  left: 70px;
+}
+
+.product-card-image {
+  margin: 0 0 32px 0;
+}
+
+.product-title-prise {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card-title {
   font-size: 18px;
   line-height: 20px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 210px;
 }
 
 .product-card-price {
@@ -835,17 +996,18 @@ body {
   text-transform: uppercase;
   background-color: inherit;
   border: 3px solid #E5E5E5;
-  padding: 15px 0;
+  padding: 15px 0 15px 2px;
   margin-bottom: 44px;
 }
 
-.pagination-wrapper{
+.pagination-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 25px;
+  padding: 15px 22px 15px 25px;
   background-color: var(--color-light_gray);
 }
+
 .pagination {
   list-style-type: none;
   display: flex;
@@ -856,18 +1018,19 @@ body {
 
 .pagination-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
 }
 
 .pagination-link {
+  display: flex;
   color: var(--color-dark);
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
   opacity: 0.3;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
 }
 
 .pagination-current {
@@ -882,7 +1045,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   opacity: 1;
-  color: var(--color-black)
+  color: var(--color-black);
 }
 
 .pagination-disabled {
