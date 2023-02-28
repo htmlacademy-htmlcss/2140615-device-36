@@ -449,6 +449,7 @@ body {
   align-items: center;
   width: 160px;
   height: 40px;
+  color: black;
 }
 
 .slider-tub-button-current {
@@ -749,6 +750,7 @@ body {
 }
 
 .social-button {
+  display: block;
   width: 40px;
   height: 40px;
   border-radius: 20px;
