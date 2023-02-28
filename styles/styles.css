@@ -969,6 +969,16 @@ body {
   height: 40px;
   top: 210px;
   left: 70px;
+  z-index: 2;
+}
+.product-card-link:hover {
+  margin-top: -40px;
+}
+.product-card-link:hover .product-card-image {
+  opacity: 0.6;
+}
+.product-card-link:hover .product-card-button {
+  display: flex;
 }
 
 .product-card-image {
