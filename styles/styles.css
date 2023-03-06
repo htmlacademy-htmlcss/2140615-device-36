@@ -108,8 +108,14 @@ body {
   opacity: 0.3;
 }
 
-.header-logo:focus {
+.header-logo:focus-visible {
   outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .header-logo:focus {
+    outline: 2px solid #AF4FFF;
+  }
 }
 
 .page-header-line {
@@ -179,6 +185,25 @@ body {
   color: inherit;
   text-decoration: none;
 }
+
+.header-link:hover {
+  opacity: 0.6;
+}
+
+.header-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .header-link:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.header-link:active {
+  opacity: 0.3;
+}
+
 
 .header-link-enter {
   padding-left: 27px;
@@ -266,8 +291,24 @@ body {
   margin-left: 16px;
 }
 
+.catalog-btn:hover::after {
+  opacity: 1;
+}
+
+.catalog-btn:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .catalog-btn:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+
 .navigation-list {
   display: flex;
+  align-items: center;
   gap: 45px;
   list-style-type: none;
   padding: 0;
@@ -283,6 +324,30 @@ body {
   height: 50px;
 }
 
+.navigation-link:hover {
+  opacity: 0.6;
+}
+
+.navigation-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+  height: 21px;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-link:focus {
+    outline: 2px solid #AF4FFF;
+    height: 21px;
+  }
+}
+
+.navigation-link:active {
+  opacity: 0.3;
+}
+
+.navigation-link:visited {
+  border-bottom: 2px solid var(--color-black);
+}
+
 /*--Основной блок--*/
 
 /*  Промо-слайдер  */
@@ -292,6 +357,7 @@ body {
 }
 
 .promo {
+  position: relative;
   margin-top: -150px;
   margin-bottom: 70px;
 }
@@ -389,35 +455,97 @@ body {
   display: none;
 }
 
+.promo-slider-button {
+  position: absolute;
+}
+
+.promo-slider-button:hover {
+  opacity: 0.6;
+}
+
+.promo-slider-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .promo-slider-button:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.promo-slider-button:active {
+  opacity: 0.3;
+}
+
+
 .slider-prev {
-  /*Временно спрятаны*/
-  display: none;
+  top: 211px;
+  left: 30px;
   background-image: url(../images/svg/arrow-left.svg);
   width: 20px;
   height: 60px;
 }
 
 .slider-next {
-  /*Временно спрятаны*/
-  display: none;
+  top: 211px;
+  left: 540px;
   background-image: url(../images/svg/arrow-right.svg);
   width: 20px;
   height: 60px;
 }
 
 .slider-pagination {
-  /*Временно спрятаны*/
-  display: none;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 20px;
   list-style-type: none;
+  padding: 0;
+  margin: -12px 0 0 0;
+}
+
+.slider-pagination-item {
+  display: block;
 }
 
 .slider-pagination-button {
+  display: block;
+  position: relative;
   background-color: inherit;
   width: 12px;
   height: 12px;
   border: 2px solid var(--color-black);
   border-radius: 6px;
   padding: 0;
+}
+
+.slider-pagination-button::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: -2px;
+  left: -2px;
+  outline-offset: 2px
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:focus-visible::after {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .slider-pagination-button:focus::after {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
 }
 
 .slider-pagination-button-current {
@@ -445,9 +573,11 @@ body {
 }
 
 .category-link {
+  display: block;
   color: var(--color-black);
   text-decoration: none;
 }
+
 
 .category-image {
   width: 160px;
@@ -457,6 +587,9 @@ body {
   background-color: var(--color-yelow);
   margin: 0 0 32px 0;
 }
+
+
+
 
 .category-image-vr {
   background-image: url(../images/svg/vr.svg);
@@ -497,6 +630,24 @@ body {
   line-height: 24px;
   letter-spacing: -0.02em;
   background-color: var(--color-white);
+}
+
+.category-link:hover .category-image {
+  background-color: var(--color-yellow_hover);
+}
+
+.category-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .category-link:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.category-link:active {
+  opacity: 0.3;
 }
 
 /*  Сервисы  */
