@@ -1373,6 +1373,25 @@ body {
   opacity: 0.2;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus-visible {
+  outline: 1px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .breadcrumbs-link:focus {
+    outline: 1px solid #AF4FFF;
+  }
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+
 .catalog-monopods {
   background-color: var(--color-light);
 }
@@ -1479,6 +1498,26 @@ body {
   background-image: url(../images/svg/full-arrow-down.svg);
 }
 
+.sorting-btn:hover {
+  opacity: 0.5;
+}
+
+.sorting-btn:focus-visible {
+  outline: 1px solid #AF4FFF;
+  opacity: 1;
+}
+
+@supports not selector(:focus-visible) {
+  .sorting-btn:focus {
+    outline: 1px solid #AF4FFF;
+    opacity: 1;
+  }
+}
+
+.sorting-btn:active {
+  opacity: 1;
+}
+
 .product-wrapper {
   display: flex;
   flex-direction: column;
@@ -1497,6 +1536,7 @@ body {
 }
 
 .product-card-link {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -1526,6 +1566,44 @@ body {
   display: flex;
 }
 
+.product-card-button:hover::before {
+  height: 8px;
+  background-color: var(--color-yelow);
+}
+
+.product-card-link:hover .product-new {
+  margin-top: 40px;
+  opacity: 0.3;
+}
+
+.product-card-link:hover .product-title-prise {
+  opacity: 0.6;
+}
+
+.product-card-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .product-card-link:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.product-card-link:active .product-card-button::before {
+  background-color: var(--color-yellow_hover);
+}
+
+.product-card-link:active .product-new {
+  margin-top: 40px;
+  opacity: 0.3;
+}
+
+.product-card-link:active .product-title-prise {
+  opacity: 0.3;
+}
+
+
 .product-card-image {
   margin: 0 0 32px 0;
 }
@@ -1546,6 +1624,25 @@ body {
 .product-card-price {
   font-size: 18px;
   line-height: 21px;
+}
+
+.product-new {
+  position: absolute;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  top: 27px;
+  right: 27px;
+  opacity: 0.6;
 }
 
 .button-download-more {
