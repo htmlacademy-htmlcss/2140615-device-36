@@ -134,6 +134,17 @@ body {
   height: 40px;
 }
 
+.header-search-field-wrap {
+  content: "";
+  display: flex;
+  flex-grow: 1;
+}
+
+.header-search-btn-wrap {
+  content: "";
+  display: flex;
+}
+
 .header-search-field {
   font-family: inherit;
   font-size: 16px;
@@ -144,12 +155,51 @@ body {
   border-right: none;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 0 0 0 48px;
+  padding: 0 16px 0 48px;
   background-image: url(../images/svg/search.svg);
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 15px;
 }
+
+.header-search-field::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.header-search-field::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.header-search-field::-webkit-search-decoration,
+.header-search-field::-webkit-search-cancel-button,
+.header-search-field::-webkit-search-results-button,
+.header-search-field::-webkit-search-results-decoration {
+  display: none;
+}
+
+.header-search-field:hover,
+.header-search-field:focus-visible {
+  outline: none;
+}
+
+.header-search-field-wrap:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.header-search-field:focus {
+  outline: none;
+}
+
+.header-search-field::placeholder {
+  color: var(--color-black);
+  opacity: 0.3;
+}
+
 
 
 .header-search-btn {
@@ -161,7 +211,32 @@ body {
   border: 2px solid var(--color-black);
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  cursor: pointer;
 }
+
+.header-search-btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.header-search-btn:hover,
+.header-search-btn:focus-visible {
+  outline: none;
+}
+
+.header-search-btn-wrap:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.header-search-btn:focus {
+  outline: none;
+}
+
+.header-search-btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 
 .header-links {
   display: flex;
@@ -256,33 +331,33 @@ body {
 .header-navigation {
   display: flex;
   justify-content: space-between;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  width: 100%;
+
 }
 
 .catalog-btn {
   display: flex;
+  position: relative;
   align-items: center;
-  font-family: inherit;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: inherit;
   border: none;
-  padding: 0;
+  padding: 15px 0;
 }
 
 .catalog-btn::after {
+  position: absolute;
+  right: -68px;
   content: "";
   display: block;
   width: 46px;
   height: 46px;
   border: 2px solid var(--color-black);
-  border-radius: 27px;
+  border-radius: 50%;
   background-image: url(../images/svg/plus.svg);
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -291,7 +366,8 @@ body {
   margin-left: 16px;
 }
 
-.catalog-btn:hover::after {
+.catalog-btn:hover::after,
+.catalog-btn:hover::before {
   opacity: 1;
 }
 
@@ -305,10 +381,52 @@ body {
   }
 }
 
+.catalog-btn:focus-within::after {
+  background-image: url(../images/svg/minus.svg);
+}
+
+.catalog-nav:focus-within .subcatalog {
+  display: grid;
+}
+
+.catalog-nav {
+  flex-grow: 1;
+  position: relative;
+}
+
+.subcatalog {
+  position: absolute;
+  display: none;
+  grid-template-columns: 222px 181px 181px;
+  column-gap: 30px;
+  row-gap: 18px;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0 0 0 -60px;
+  padding: 14px 0 57px 60px;
+  list-style: none;
+  background-color: var(--color-yelow);
+  z-index: 2;
+  width: 1100px;
+}
+
+.subcatalog-item:last-child {
+  grid-area: 3 / 1;
+}
+
+.subcatalog-link {
+  text-decoration: none;
+  color: var(--color-black);
+}
 
 .navigation-list {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 45px;
   list-style-type: none;
   padding: 0;
@@ -1628,7 +1746,7 @@ body {
 
 .product-new {
   position: absolute;
-  display: flex;
+  display: none;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -1643,6 +1761,10 @@ body {
   top: 27px;
   right: 27px;
   opacity: 0.6;
+}
+
+.new-active {
+  display: flex;
 }
 
 .button-download-more {
