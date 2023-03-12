@@ -98,6 +98,7 @@ body {
   position: absolute;
   top: 18px;
   margin-left: -2px;
+  cursor: pointer;
 }
 
 .header-logo:hover {
@@ -347,6 +348,7 @@ body {
   background-color: inherit;
   border: none;
   padding: 15px 0;
+  cursor: pointer;
 }
 
 .catalog-btn::after {
@@ -418,6 +420,25 @@ body {
   text-decoration: none;
   color: var(--color-black);
 }
+
+.subcatalog-link:hover {
+  opacity: 0.6;
+}
+
+.subcatalog-link:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .subcatalog-link:focus {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.subcatalog-link:active {
+  opacity: 0.3;
+}
+
 
 .navigation-list {
   font-family: "Raleway", sans-serif;
@@ -530,6 +551,7 @@ body {
   text-decoration: none;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .button::before {
@@ -604,6 +626,7 @@ body {
 
 .promo-slider-button {
   position: absolute;
+  cursor: pointer;
 }
 
 .promo-slider-button:hover {
@@ -649,6 +672,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: -12px 0 0 0;
+  cursor: pointer;
 }
 
 .slider-pagination-item {
@@ -855,6 +879,8 @@ body {
   align-items: center;
   width: 160px;
   height: 40px;
+  border: none;
+  background-color: inherit;
 }
 
 .slider-tub-button-current:hover {
@@ -1143,6 +1169,23 @@ body {
   display: flex;
 }
 
+.newsletter-form-email:focus-visible {
+  outline: none;
+  background-color: var(--color-gray);
+}
+
+@supports not selector(:focus-visible) {
+  .newsletter-form-email:focus {
+    outline: none;
+    background-color: var(--color-gray);
+    }
+}
+
+.newsletter-form-email:invalid:not(:placeholder-shown) {
+  border-bottom: 3px solid var(--color-red);
+  background-color: transparent;
+}
+
 .newsletter-button {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -1153,6 +1196,29 @@ body {
   height: 57px;
   box-sizing: border-box;
   border: 3px solid #C4C4C4;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.newsletter-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+  .newsletter-button:focus {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+  }
+}
+
+.newsletter-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .newsletter-free {
@@ -1529,7 +1595,9 @@ body {
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin: 0 0 60px 0;
+  padding: 0 0 59px;
+  margin: 0 0 12px 0;
+  border-bottom: 2px solid var(--color-black);
 }
 
 .catalog-filter-title {
@@ -1540,8 +1608,133 @@ body {
 }
 
 .catalog-filter-group {
-  margin: 0;
+  padding: 0 0 35px 0;
+  margin: 0 0 12px 0;
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+}
+
+.form-range {
+  position: relative;
+    margin-bottom: 9px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-gray)
+}
+
+.form-range::before {
+  content: "";
+    position: relative;
+    display: block;
+    top: 0;
+    left: 7px;
+    width: 123px;
+    height: 2px;
+    background-color: var(--color-black)
+}
+
+.btn-reset {
   padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form-range-btn {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
+  background-color: var(--color-light);
+  transition: opacity 0.3s ease;
+}
+
+.form-range-btn--min {
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-range-btn--max {
+  right: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-range-btn::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+}
+
+.form-range-btn:hover {
+  opacity: 0.5;
+}
+
+.form-range-btn:focus {
+  outline: none;
+}
+
+.form-range-btn:focus-visible::after {
+  outline: 2px solid #AF4FFF;
+}
+
+@supports not selector(:focus-visible) {
+  .form-range-btn:focus::after {
+    outline: 2px solid #AF4FFF;
+  }
+}
+
+.form-range-btn:active {
+  opacity: 1;
+  background-color: var(--color-black);
+}
+
+.form-range-label {
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.form-range-label--from {
+  display: inline-block;
+  transform: translateX(-12px);
+}
+.form-range-label--before {
+  display: inline-block;
+  transform: translateX(46px);
+}
+
+.form-range-input {
+  padding: 0;
+  width: 45px;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-form-label);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  appearance: textfield;
+}
+
+.form-range-input::-webkit-outer-spin-button,
+.form-range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+
+
+
+.form-fieldset-radio {
   border: none;
 }
 
@@ -1549,7 +1742,7 @@ body {
   list-style-type: none;
   font-size: 16px;
   line-height: 20px;
-  margin: 0 0 35px 0;
+  margin: 0;
   padding: 0;
 }
 

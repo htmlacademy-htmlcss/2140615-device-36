@@ -55,7 +55,30 @@
           </ul>
         </div>
         <nav class="header-navigation">
-          <button class="catalog-btn" type="button">Каталог товаров</button>
+          <div class="catalog-nav">
+            <button class="catalog-btn" type="button">Каталог товаров</button>
+            <ul class="subcatalog">
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Виртуальная реальность</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Фитнес-браслеты</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Квадрокоптеры</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Умные часы</a>
+              </li>
+              <li class="subcatalog-item">
+                <a class="subcatalog-link" href="catalog.html">Экшн-камеры</a>
+              </li>
+            </ul>
+          </div>
+
           <ul class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-link" href="#">Доставка</a>
@@ -94,7 +117,20 @@
           <div class="catalog-filter-wrapper">
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <h3 class="filter-title">Фильтр:</h3>
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group form-fieldset-range">
+                <legend class="catalog-filter-title">Стоимость</legend>
+                <div class="form-range">
+                  <button class="form-range-btn form-range-btn--min btn-reset" type="button"><span class="visually-hidden">Минимум</span></button>
+                  <button class="form-range-btn form-range-btn--max btn-reset" type="button"><span class="visually-hidden">Максимум</span></button>
+                </div>
+                <label class="form-range-label form-range-label--from" for="from">от
+                  <input class="form-range-input form-range-from" type="number" name="min-price" id="from" value="0" aria-label="Введите число от 0">
+                </label>
+                <label class="form-range-label form-range-label--before" for="before">до
+                  <input class="form-range-input form-range-before" type="number" name="max-price" id="before" value="5000" aria-label="Введите число не больше 5000">
+                </label>
+              </fieldset>
+              <fieldset class="catalog-filter-group form-fieldset-checkbox">
                 <legend class="catalog-filter-title">Цвет</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
@@ -130,7 +166,7 @@
                 </ul>
               </fieldset>
 
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group form-fieldset-radio">
                 <legend class="catalog-filter-title">Bluetooth</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
