@@ -2120,6 +2120,11 @@ body {
   }
 }
 
+.button-download-more:active {
+  border: 3px solid #000000;
+  opacity: 0.3;
+}
+
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
@@ -2261,8 +2266,22 @@ body {
   background-position: center;
 }
 
+.modal__btn-close:hover {
+  opacity: 0.6;
+}
+
 .modal__btn-close:focus-visible {
   outline: 2px solid var(--color-purple);
+}
+
+@supports not selector(:focus-visible) {
+  .modal__btn-close:focus {
+    outline: 2px solid var(--color-purple);
+  }
+}
+
+.modal__btn-close:active {
+  opacity: 0.3;
 }
 
 .modal__form {
@@ -2403,6 +2422,7 @@ body {
 
 .modal__wrap-btn-number {
   display: flex;
+  justify-content: space-between;
 }
 
 .modal__btn {
@@ -2410,11 +2430,13 @@ body {
   align-items: center;
   justify-content: center;
   width: 60px;
+  height: 60px;
+  z-index: 1;
   background-color: var(--color-light);
 }
 
-.modal__btn:hover:not(:disabled) {
-  background-color: var(--color-light_gray);
+.modal__btn:hover {
+  opacity: 0.6;
 }
 
 .modal__btn:focus-visible {
@@ -2430,7 +2452,7 @@ body {
 }
 
 .modal__btn:active {
-  background-color: var(--color-light);
+  opacity: 0.3;
 }
 
 .modal__input--number {
@@ -2480,6 +2502,12 @@ body {
   transition: outline 0.3s;
 }
 
+.modal__input--number:invalid:not(:placeholder-shown) {
+  position: absolute;
+  width: 100%;
+  outline-offset: 0;
+}
+
 .modal__input:hover {
   background-color: var(--color-gray);
 }
@@ -2492,8 +2520,22 @@ body {
 @supports not selector(:focus-visible) {
   .modal__input:focus {
     outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
   }
 }
+
+.modal__input--number:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: -2px;
+}
+
+@supports not selector(:focus-visible) {
+  .modal__input--number:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
+  }
+}
+
 
 /* поповер */
 
@@ -2671,7 +2713,7 @@ body {
 }
 
 .popover__btn-open:hover {
-background-color: var(--color-yelow);
+  background-color: var(--color-yelow);
 }
 
 .popover__btn-open:focus-visible {
@@ -2687,5 +2729,5 @@ background-color: var(--color-yelow);
 }
 
 .popover__btn-open:active {
-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
