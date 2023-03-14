@@ -3,8 +3,10 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Интернет магазин Device</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Интернет магазин Device</title>
   </head>
 
   <body>
@@ -20,15 +22,12 @@
       <div class="page-header-container">
         <div class="page-header-line">
           <form class="header-search" action="https://echo.htmlacademy.ru" method="get">
-              <div class="header-search-label">
+            <div class="header-search-label">
               <div class="header-search-field-wrap">
                 <label class="visually-hidden" for="search">Поиск по сайту</label>
                 <input class="header-search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
               </div>
-              <div class="header-search-btn-wrap">
-                <label class="visually-hidden" for="search-btn">Кнопка "найти"</label>
-                <input class="header-search-btn" type="submit" value="Найти" id="search-btn">
-              </div>
+              <button class="header-search-btn" type="submit">Найти</button>
             </div>
           </form>
           <ul class="header-links header-links-login">
@@ -59,17 +58,21 @@
                 <ul class="popover__list">
                   <li class="popover__item">
                     <a class="popover__link" href="#">
-                      <img class="popover__img" src="images/monopod-lite.jpg" width="39" height="43" alt="Любительская селфи-палка.">
+                      <img class="popover__img" src="images/monopod-lite.jpg" width="39" height="43"
+                        alt="Любительская селфи-палка.">
                       <h2 class="popover__title">Любительская<br>селфи-палка</h2>
                     </a>
-                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
+                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из
+                        корзины</span> </button>
                   </li>
                   <li class="popover__item">
                     <a class="popover__link" href="#">
-                      <img class="popover__img" src="images/monopod-prof.jpg" width="39" height="43" alt="Профессиональная селфи-палка.">
+                      <img class="popover__img" src="images/monopod-prof.jpg" width="39" height="43"
+                        alt="Профессиональная селфи-палка.">
                       <h2 class="popover__title">Профессиональная селфи-палка</h2>
                     </a>
-                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
+                    <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из
+                        корзины</span> </button>
                   </li>
                 </ul>
                 <div class="popover__total">
@@ -324,58 +327,6 @@
             </p>
           </a>
         </div>
-        <!--Модальное окно-->
-        <div class="modal modal-container" id="modal">
-          <div class="modal__delivery">
-            <h2 class="modal-title">Доставка под заказ</h2>
-            <a class="modal__btn-close" href="#">
-              <span class="visually-hidden">Закрыть</span>
-            </a>
-            <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
-              <p class="modal__field-group modal__field-group--name">
-                <label class="modal__label modal__label--name" for="name">Ваше имя:</label>
-                <input class="modal__input modal__input--name" type="text" name="name" id="name" placeholder="Введите имя" required="">
-                <span class="modal__massage modal__massage--error-name">Добавьте имя</span>
-              </p>
-              <p class="modal__field-group modal__field-group--email">
-                <label class="modal__label modal__label--email" for="e-mail">Ваш e-mail:</label>
-                <input class="modal__input modal__input--email" type="email" name="email" id="e-mail" placeholder="Почта" required="">
-                <span class="modal__massage modal__massage--error-email">Забавный у вас адрес</span>
-              </p>
-              <p class="modal__field-group modal__field-group--order">
-                <label class="modal__label modal__label--order" for="order">Что нужно привезти:</label>
-                <input class="modal__input modal__input--order" type="text" name="order" id="order" placeholder="В свободной форме" required="">
-              </p>
-              <!-- Тултип -->
-              <p class="modal__field-group modal__field-group--number">
-                <span class="modal__label modal__label--number">
-                  <label class="modal__label modal__label--number" for="number">Количество:</label>
-                  <span class="modal__tooltip tooltip">
-                    <button class="tooltip__btn" type="button">
-                      <span class="visually-hidden">Информация о количестве предметов в заказе</span>
-                    </button>
-                    <span class="tooltip__text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
-                    </span>
-                  </span>
-                </span>
-                <span class="modal__wrap-btn-number">
-                  <button class="modal__btn modal__btn--minus btn-reset" type="button">
-                    <svg width="16" height="2" viewBox="0 0 16 2" role="img" aria-label="Минус" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 0H0V2H16V0Z" fill="black"></path>
-                    </svg>
-                  </button>
-                  <input class="modal__input modal__input--number" type="number" name="number" id="number" value="1" step="1" min="1" required="">
-                  <button class="modal__btn modal__btn--plus btn-reset" type="button">
-                    <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Плюс" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"></path>
-                    </svg>
-                  </button>
-                </span>
-              </p>
-              <button class="modal__btn-submit button btn-line btn-reset" type="submit">Отправить</button>
-            </form>
-          </div>
-        </div>
 
       </section>
 
@@ -423,14 +374,11 @@
             спецпредложения и вот это вот всё.
           </p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="newsletter-form-name">
-              <label class="visually-hidden" for="email">Введите ваш e-mail</label>
-              <input class="newsletter-form-email" type="email" name="newsletter-name" id="email" placeholder="Ваш e-mail">
-              <label class="visually-hidden" for="email-btn">Подписаться</label>
-              <input class="newsletter-button" type="submit" value="Подписаться" id="email-btn">
-            </div>
+            <label class="visually-hidden" for="email">Введите ваш e-mail</label>
+            <input class="newsletter-form-email" type="email" name="newsletter-name" id="email"
+              placeholder="Ваш e-mail">
+            <button class="newsletter-button" type="submit">Подписаться</button>
           </form>
-
           <span class="newsletter-free">Это бесплатно</span>
         </div>
       </section>
@@ -492,6 +440,65 @@
       </div>
     </footer>
 
+    <!--Модальное окно-->
+    <div class="modal modal-container" id="modal">
+      <div class="modal__delivery">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <a class="modal__btn-close" href="#">
+          <span class="visually-hidden">Закрыть</span>
+        </a>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+          <p class="modal__field-group modal__field-group--name">
+            <label class="modal__label modal__label--name" for="name">Ваше имя:</label>
+            <input class="modal__input modal__input--name" type="text" name="name" id="name" placeholder="Введите имя"
+              required="">
+            <span class="modal__massage modal__massage--error-name">Добавьте имя</span>
+          </p>
+          <p class="modal__field-group modal__field-group--email">
+            <label class="modal__label modal__label--email" for="e-mail">Ваш e-mail:</label>
+            <input class="modal__input modal__input--email" type="email" name="email" id="e-mail" placeholder="Почта"
+              required="">
+            <span class="modal__massage modal__massage--error-email">Забавный у вас адрес</span>
+          </p>
+          <p class="modal__field-group modal__field-group--order">
+            <label class="modal__label modal__label--order" for="order">Что нужно привезти:</label>
+            <input class="modal__input modal__input--order" type="text" name="order" id="order"
+              placeholder="В свободной форме" required="">
+          </p>
+          <!-- Тултип -->
+          <p class="modal__field-group modal__field-group--number">
+            <span class="modal__label modal__label--number">
+              <label class="modal__label modal__label--number" for="number">Количество:</label>
+              <span class="modal__tooltip tooltip">
+                <button class="tooltip__btn" type="button">
+                  <span class="visually-hidden">Информация о количестве предметов в заказе</span>
+                </button>
+                <span class="tooltip__text">Постараемся найти, сколько нужно. Привезём сколько получится по
+                  требованиям к провозу багажа.
+                </span>
+              </span>
+            </span>
+            <span class="modal__wrap-btn-number">
+              <button class="modal__btn modal__btn--minus btn-reset" type="button">
+                <svg width="16" height="2" viewBox="0 0 16 2" role="img" aria-label="Минус" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0H0V2H16V0Z" fill="black"></path>
+                </svg>
+              </button>
+              <input class="modal__input modal__input--number" type="number" name="number" id="number" value="1"
+                step="1" min="1" required="">
+              <button class="modal__btn modal__btn--plus btn-reset" type="button">
+                <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="Плюс" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"></path>
+                </svg>
+              </button>
+            </span>
+          </p>
+          <button class="modal__btn-submit button btn-line btn-reset" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 
