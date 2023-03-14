@@ -2776,7 +2776,7 @@ body {
   position: absolute;
   top: 35px;
   right: -32px;
-  z-index: 1;
+  z-index: 3;
   display: block;
   padding: 19px;
   padding-left: 19px;
